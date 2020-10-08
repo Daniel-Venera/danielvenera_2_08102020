@@ -1,0 +1,81 @@
+@import "main";
+
+.google-map {
+  background-color: $grey;
+  @include flex;
+  padding: 15px 0;
+  i {
+    position: relative;
+    left: -25px;
+    padding-bottom: 3px;
+  }
+}
+
+.hero {
+  background-color: rgb(245, 245, 245);
+  padding: 40px 0 80px;
+
+  &__content {
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    h1 {
+      max-width: 250px;
+      margin: 0 auto 15px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 45px;
+    }
+    a {
+      border-radius: 30px;
+      background: linear-gradient(170deg, #ff79da, #9356da);
+      color: white;
+      padding: 15px 25px;
+      font-weight: 400;
+    }
+  }
+}
+
+.fonctionnement {
+  padding: 50px 0;
+  h2 {
+    margin-bottom: 30px;
+  }
+  .cards {
+    padding-left: 10px;
+    .card {
+      border-radius: 15px;
+      background-color: $lightGrey;
+      margin-bottom: 20px;
+      padding: 25px 10px;
+      text-align: center;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.28);
+
+      .card__content {
+        @include flex;
+        position: relative;
+        font-weight: 500;
+        .card__number {
+          position: absolute;
+          left: -22px;
+          color: white;
+          font-size: 14px;
+          font-weight: 400;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          background: $primary;
+          @include flex;
+        }
+        i {
+          position: absolute;
+          left: 25px;
+          color: grey;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

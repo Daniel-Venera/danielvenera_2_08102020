@@ -11,17 +11,22 @@ body {
 }
 
 h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2 {
   font-weight: 600;
 }
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 .container {
   margin: auto;
   max-width: 1200px;
-  padding: 0px 15px;
+  padding: 0px 20px;
 }
 
 header {
@@ -47,57 +52,6 @@ header a {
 
 header img {
   width: 100%;
-}
-
-.google-map {
-  background-color: #e8e8e8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px 0;
-}
-
-.google-map i {
-  position: relative;
-  left: -25px;
-  padding-bottom: 3px;
-}
-
-.hero {
-  background-color: whitesmoke;
-  padding: 40px 0 80px;
-}
-
-.hero__content {
-  max-width: 350px;
-  margin: auto;
-  text-align: center;
-}
-
-.hero__content h1 {
-  max-width: 250px;
-  margin: 0 auto 15px;
-}
-
-.hero__content p {
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 45px;
-}
-
-.hero__content a {
-  border-radius: 30px;
-  background: #9356dc;
-  background: linear-gradient(351deg, #9356dc 19%, #ff79da 100%);
-  color: white;
-  padding: 15px 25px;
-  font-weight: 400;
 }
 
 @media (min-width: 576px) {

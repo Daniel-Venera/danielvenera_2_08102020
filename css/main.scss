@@ -2,6 +2,7 @@ $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $grey: #e8e8e8;
+$lightGrey: rgb(245, 245, 245);
 
 @mixin flex {
   display: flex;
@@ -21,17 +22,22 @@ body {
 }
 
 h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2 {
   font-weight: 600;
 }
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 .container {
   margin: auto;
   max-width: 1200px;
-  padding: 0px 15px;
+  padding: 0px 20px;
 }
 
 header {
@@ -45,45 +51,6 @@ header {
   }
   img {
     width: 100%;
-  }
-}
-
-.google-map {
-  background-color: $grey;
-  @include flex;
-  padding: 15px 0;
-  i {
-    position: relative;
-    left: -25px;
-    padding-bottom: 3px;
-  }
-}
-
-.hero {
-  background-color: rgb(245, 245, 245);
-  padding: 40px 0 80px;
-
-  &__content {
-    max-width: 350px;
-    margin: auto;
-    text-align: center;
-    h1 {
-      max-width: 250px;
-      margin: 0 auto 15px;
-    }
-    p {
-      font-size: 18px;
-      font-weight: 300;
-      margin-bottom: 45px;
-    }
-    a {
-      border-radius: 30px;
-      background: rgb(147, 86, 220);
-      background: linear-gradient(351deg, rgba(147, 86, 220, 1) 19%, rgba(255, 121, 218, 1) 100%);
-      color: white;
-      padding: 15px 25px;
-      font-weight: 400;
-    }
   }
 }
 
@@ -110,3 +77,14 @@ header {
     max-width: 1140px;
   }
 }
+
+// a:hover .card__heart {
+//   span {
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     background-color: red;
+//     i {
+//       color: transparent;
+//     }
+//   }
+// }
