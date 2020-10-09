@@ -40,9 +40,6 @@
 
 .fonctionnement {
   padding: 50px 0;
-  h2 {
-    margin-bottom: 30px;
-  }
   .cards {
     padding-left: 10px;
     .card {
@@ -74,6 +71,59 @@
           left: 25px;
           color: grey;
           font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.restaurants {
+  background-color: rgb(245, 245, 245);
+  padding: 50px 0;
+
+  .cards {
+    .card {
+      border-radius: 12px;
+      background-color: white;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+      &__new {
+        border-radius: 3px;
+        background-color: $tertiary;
+        color: #6ea799;
+        font-size: 15px;
+        width: 80px;
+        text-align: center;
+        padding: 5px 0;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+      }
+      &__img {
+        height: 175px;
+      }
+      #palette {
+        background: url("../img/restaurants/palette.jpg") center no-repeat;
+        background-size: cover;
+      }
+
+      &__body {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-weight: 300;
+        }
+        .card__heart {
+          padding: 5px;
+          i {
+            font-size: 25px;
+          }
+          .fas {
+            display: none;
+          }
         }
       }
     }
