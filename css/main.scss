@@ -21,20 +21,20 @@ body {
   }
 }
 
-@keyframes spinner {
-  0% {
-    background-color: $primary;
-    z-index: 9999;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes loading {
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes spinner {
+//   0% {
+//     background-color: $primary;
+//     z-index: 9999;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+// @keyframes loading {
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
 
 h1 {
   font-family: $shr;
@@ -50,18 +50,24 @@ a {
   color: #000;
 }
 
+.btn {
+  border-radius: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(170deg, #ff79da, #9356da);
+
+  color: white;
+  padding: 15px 25px;
+  font-weight: 400;
+  &:hover {
+    background: linear-gradient(170deg, #ff79da, #ff79da);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
 .container {
   margin: auto;
   max-width: 1200px;
   padding: 0px 20px;
-}
-
-.btn {
-  border-radius: 30px;
-  background: linear-gradient(170deg, #ff79da, #9356da);
-  color: white;
-  padding: 15px 25px;
-  font-weight: 400;
 }
 
 @media (min-width: 576px) {
