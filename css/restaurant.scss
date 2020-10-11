@@ -1,0 +1,19 @@
+@import "config";
+
+header {
+  display: block;
+  .container {
+    text-align: center;
+    margin: 0;
+    h1 {
+      position: relative;
+      i {
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
