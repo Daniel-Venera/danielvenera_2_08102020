@@ -10,6 +10,66 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  color: white;
+  z-index: -1;
+  -webkit-animation: 3s spinner;
+          animation: 3s spinner;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
+  font-family: "Shrikhand", cursive;
+}
+
+.spinner i {
+  -webkit-animation: 3s loading;
+          animation: 3s loading;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    background-color: #9356dc;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    background-color: #9356dc;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }

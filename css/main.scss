@@ -4,6 +4,38 @@ body {
   font-family: $rob;
 }
 
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  color: white;
+  z-index: -1;
+  animation: 3s spinner;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-family: $shr;
+  i {
+    animation: 3s loading;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    background-color: $primary;
+    z-index: 9999;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 h1 {
   font-family: $shr;
 }
