@@ -1,5 +1,13 @@
 @import "config";
 
+.cards {
+  margin-left: -20px;
+  margin-right: -20px;
+  .card {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
 .google-map {
   background-color: $grey;
   @include flex;
@@ -38,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     .card {
       width: 100%;
       max-width: 330px;
@@ -99,10 +108,11 @@
 
   .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     .card {
       width: 100%;
+      max-width: 350px;
       border-radius: 12px;
       background-color: white;
       position: relative;
@@ -155,22 +165,3 @@
     }
   }
 }
-
-@media (min-width: 992px) {
-  .restaurants {
-    .card {
-      max-width: 400px;
-    }
-  }
-}
-
-// a:hover .card__heart {
-//   span {
-//     background-clip: text;
-//     -webkit-background-clip: text;
-//     background-color: red;
-//     i {
-//       color: transparent;
-//     }
-//   }
-// }

@@ -6,6 +6,16 @@
   list-style: none;
 }
 
+.cards {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.cards .card {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .google-map {
   background-color: #e8e8e8;
   display: -webkit-box;
@@ -150,15 +160,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .restaurants .cards .card {
   width: 100%;
+  max-width: 350px;
   border-radius: 12px;
   background-color: white;
   position: relative;
@@ -221,11 +232,5 @@
 
 .restaurants .cards .card__body .card__heart .fas {
   display: none;
-}
-
-@media (min-width: 992px) {
-  .restaurants .card {
-    max-width: 400px;
-  }
 }
 /*# sourceMappingURL=home.css.map */

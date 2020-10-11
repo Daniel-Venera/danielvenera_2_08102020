@@ -38,16 +38,6 @@ a {
   font-weight: 400;
 }
 
-.cards {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.card {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
