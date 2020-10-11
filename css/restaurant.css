@@ -115,6 +115,21 @@ main section .card {
   margin-bottom: 15px;
 }
 
+main section .card--one {
+  -webkit-animation: 2s fonduOne;
+          animation: 2s fonduOne;
+}
+
+main section .card--two {
+  -webkit-animation: 2s fonduTwo;
+          animation: 2s fonduTwo;
+}
+
+main section .card--three {
+  -webkit-animation: 2s fonduThree;
+          animation: 2s fonduThree;
+}
+
 main section .card__content h4 {
   font-size: 18px;
   font-weight: 500;
@@ -136,6 +151,58 @@ main section .card__price {
 main .command {
   text-align: center;
   margin-top: 50px;
+}
+
+@-webkit-keyframes fonduOne {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fonduOne {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fonduTwo {
+  0%,
+  10% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fonduTwo {
+  0%,
+  10% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fonduThree {
+  0%,
+  10% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fonduThree {
+  0%,
+  10% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
 }
 
 @media (min-width: 992px) {

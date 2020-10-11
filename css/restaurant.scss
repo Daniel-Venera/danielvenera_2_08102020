@@ -85,6 +85,15 @@ main {
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
+      &--one {
+        animation: 2s fonduOne;
+      }
+      &--two {
+        animation: 2s fonduTwo;
+      }
+      &--three {
+        animation: 2s fonduThree;
+      }
       &__content {
         h4 {
           font-size: 18px;
@@ -106,6 +115,28 @@ main {
   .command {
     text-align: center;
     margin-top: 50px;
+  }
+}
+@keyframes fonduOne {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fonduTwo {
+  0%,
+  10% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fonduThree {
+  0%,
+  10% {
+    transform: translateY(10px);
+    opacity: 0;
   }
 }
 
