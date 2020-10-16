@@ -221,33 +221,4 @@
 .restaurants .cards .card__body p {
   font-weight: 300;
 }
-
-.restaurants .cards .card__body .card__heart {
-  padding: 5px;
-  position: relative;
-  z-index: 9999;
-  cursor: pointer;
-}
-
-.restaurants .cards .card__body .card__heart i {
-  position: absolute;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.restaurants .cards .card__body .card__heart .far {
-  font-size: 26px;
-  left: -20px;
-}
-
-.restaurants .cards .card__body .card__heart .fas {
-  color: white;
-  left: -19px;
-  font-size: 24px;
-  top: 6px;
-}
-
-.restaurants .cards .card__body .card__heart:hover i {
-  color: #9356dc;
-}
 /*# sourceMappingURL=home.css.map */

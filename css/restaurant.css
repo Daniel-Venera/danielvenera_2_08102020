@@ -66,22 +66,14 @@ header h1 i {
   margin-bottom: 0;
 }
 
-.hero .title .container .heart, .hero .title .title .heart {
-  font-size: 25px;
-  padding-right: 20px;
-}
-
-.hero .title .container .heart .fas, .hero .title .title .heart .fas {
-  display: none;
-}
-
 main {
   background-color: whitesmoke;
   padding: 45px 0 80px;
 }
 
 main section {
-  margin-bottom: 30px;
+  max-width: 330px;
+  margin: 0 auto 30px;
 }
 
 main section h3 {
@@ -101,6 +93,7 @@ main section h3::after {
 }
 
 main section .card {
+  position: relative;
   padding: 15px 25px 10px 10px;
   background-color: white;
   border-radius: 15px;
@@ -109,10 +102,13 @@ main section .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 main section .card--one {
@@ -130,22 +126,101 @@ main section .card--three {
           animation: 2s fonduThree;
 }
 
-main section .card__content h4 {
+main section .card h4 {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
+  max-width: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  max-height: 42px;
+  overflow: hidden;
 }
 
-main section .card__content p {
+main section .card__infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  max-width: 100%;
+}
+
+main section .card__infos p {
   font-size: 15px;
   padding-right: 10px;
   font-weight: 300;
+  overflow: hidden;
+  width: 90%;
 }
 
-main section .card__price {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+main section .card__infos .card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-weight: 500;
+  width: 10%;
+}
+
+main section .card__validator {
+  position: absolute;
+  background-color: #99e2d0;
+  width: 20%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  top: 0;
+  right: -20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .card__validator .check {
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  color: #99e2d0;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+main section .card:hover .card__infos,
+main section .card:hover h4 {
+  max-width: 80%;
+}
+
+main section .card:hover .card__validator {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+main section .card:hover .card__validator .check {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
 }
 
 main .command {
@@ -205,21 +280,16 @@ main .command {
   }
 }
 
+@media (min-width: 380px) {
+  main section .card__infos p {
+    max-height: 19px;
+    word-break: break-all;
+  }
+}
+
 @media (min-width: 992px) {
   main {
     padding-top: 70px;
-  }
-  .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  .row section {
-    width: 33.3%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 /*# sourceMappingURL=restaurant.css.map */

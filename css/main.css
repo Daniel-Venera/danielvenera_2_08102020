@@ -148,4 +148,33 @@ footer ul li span {
             justify-content: space-between;
   }
 }
+
+.card__heart {
+  padding: 5px;
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.card__heart i {
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card__heart .far {
+  font-size: 26px;
+  left: -20px;
+}
+
+.card__heart .fas {
+  color: white;
+  left: -19px;
+  font-size: 24px;
+  top: 6px;
+}
+
+.card__heart:hover i {
+  color: #9356dc;
+}
 /*# sourceMappingURL=main.css.map */
