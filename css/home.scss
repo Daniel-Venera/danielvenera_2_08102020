@@ -154,11 +154,25 @@
         }
         .card__heart {
           padding: 5px;
+          position: relative;
+          z-index: 9999;
+          cursor: pointer;
           i {
-            font-size: 25px;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+          }
+          .far {
+            font-size: 26px;
+            left: -20px;
           }
           .fas {
-            display: none;
+            color: white;
+            left: -19px;
+            font-size: 24px;
+            top: 6px;
+          }
+          &:hover i {
+            color: $primary;
           }
         }
       }
