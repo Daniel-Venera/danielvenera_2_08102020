@@ -112,18 +112,18 @@ main section .card {
 }
 
 main section .card--one {
-  -webkit-animation: 2s fonduOne;
-          animation: 2s fonduOne;
+  -webkit-animation: 5s fonduOne;
+          animation: 5s fonduOne;
 }
 
 main section .card--two {
-  -webkit-animation: 2s fonduTwo;
-          animation: 2s fonduTwo;
+  -webkit-animation: 5s fonduTwo;
+          animation: 5s fonduTwo;
 }
 
 main section .card--three {
-  -webkit-animation: 2s fonduThree;
-          animation: 2s fonduThree;
+  -webkit-animation: 5s fonduThree;
+          animation: 5s fonduThree;
 }
 
 main section .card h4 {
@@ -152,6 +152,13 @@ main section .card__infos p {
   font-weight: 300;
   overflow: hidden;
   width: 90%;
+}
+
+main section .card__infos .hidden {
+  display: none;
+  padding-right: 10px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 main section .card__infos .card__price {
@@ -223,6 +230,10 @@ main section .card:hover .card__validator .check {
           transform: rotateZ(360deg);
 }
 
+main section .card:hover .card__infos span {
+  display: inline-block;
+}
+
 main .command {
   text-align: center;
   margin-top: 50px;
@@ -244,43 +255,7 @@ main .command {
   }
 }
 
-@-webkit-keyframes fonduTwo {
-  0%,
-  10% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-}
-
-@keyframes fonduTwo {
-  0%,
-  10% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fonduThree {
-  0%,
-  10% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-}
-
-@keyframes fonduThree {
-  0%,
-  10% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-}
-
-@media (min-width: 380px) {
+@media (min-width: 320px) {
   main section .card__infos p {
     max-height: 19px;
     word-break: break-all;

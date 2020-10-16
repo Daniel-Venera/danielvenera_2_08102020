@@ -83,13 +83,13 @@ main {
       overflow: hidden;
       cursor: pointer;
       &--one {
-        animation: 2s fonduOne;
+        animation: 5s fonduOne;
       }
       &--two {
-        animation: 2s fonduTwo;
+        animation: 5s fonduTwo;
       }
       &--three {
-        animation: 2s fonduThree;
+        animation: 5s fonduThree;
       }
 
       h4 {
@@ -116,6 +116,11 @@ main {
           width: 90%;
           // word-break: break-all;
           // word-break: break-all;
+        }
+        .hidden {
+          display: none;
+          padding-right: 10px;
+          transition: all 1s ease-in-out;
         }
         .card__price {
           display: flex;
@@ -159,7 +164,8 @@ main {
           transform: rotateZ(360deg);
         }
       }
-      &:hover p {
+      &:hover .card__infos span {
+        display: inline-block;
       }
     }
   }
@@ -175,23 +181,23 @@ main {
   }
 }
 
-@keyframes fonduTwo {
-  0%,
-  10% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-}
+// @keyframes fonduTwo {
+//   0%,
+//   10% {
+//     transform: translateY(10px);
+//     opacity: 0;
+//   }
+// }
 
-@keyframes fonduThree {
-  0%,
-  10% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-}
+// @keyframes fonduThree {
+//   0%,
+//   10% {
+//     transform: translateY(10px);
+//     opacity: 0;
+//   }
+// }
 
-@media (min-width: 380px) {
+@media (min-width: 320px) {
   main section .card__infos p {
     max-height: 19px;
     word-break: break-all;
