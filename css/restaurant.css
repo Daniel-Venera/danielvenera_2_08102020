@@ -29,8 +29,13 @@ header h1 i {
   background: url("../img/restaurants/palette.jpg") center no-repeat;
 }
 
+#delice {
+  background: url("../img/restaurants/delice.jpg") center no-repeat;
+}
+
 #francaise,
-#palette {
+#palette,
+#delice {
   background-size: cover;
 }
 
@@ -142,6 +147,7 @@ main section .card h4 {
   transition: all 0.7s ease-in-out;
   max-height: 21px;
   overflow: hidden;
+  word-break: break-all;
 }
 
 main section .card__infos {
@@ -160,6 +166,7 @@ main section .card__infos p {
   font-weight: 300;
   overflow: hidden;
   width: 90%;
+  word-break: break-all;
 }
 
 main section .card__infos .card__price {
