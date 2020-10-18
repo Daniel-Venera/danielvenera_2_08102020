@@ -5,42 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-// .spinner {
-//   height: 100vh;
-//   width: 100vw;
-//   position: fixed;
-//   z-index: -9999;
-//   color: white;
-//   animation: 4s spinner;
-//   font-size: 60px;
-//   font-family: $shr;
-//   opacity: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: $primary;
-//   i {
-//     animation: 4s loading;
-//   }
-// }
-
-// @keyframes spinner {
-//   0%,
-//   80% {
-//     z-index: 9999;
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
-
-@keyframes loading {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 h1 {
   font-family: $shr;
 }
@@ -64,6 +28,8 @@ a {
   font-weight: 400;
   overflow: hidden;
   &__color {
+    border-radius: 30px;
+
     transition: $transSmooth;
     width: 100%;
     height: 100%;
@@ -172,4 +138,27 @@ footer {
   &:hover i {
     color: $primary;
   }
+}
+
+#francaise {
+  background: url("../img/restaurants/francaise.jpg") center no-repeat;
+}
+
+#palette {
+  background: url("../img/restaurants/palette.jpg") center no-repeat;
+}
+
+#delice {
+  background: url("../img/restaurants/delice.jpg") center no-repeat;
+}
+
+#note {
+  background: url("../img/restaurants/note.jpg") center no-repeat;
+}
+
+#francaise,
+#palette,
+#delice,
+#note {
+  background-size: cover;
 }

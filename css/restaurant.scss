@@ -16,29 +16,6 @@ header {
   }
 }
 
-#francaise {
-  background: url("../img/restaurants/francaise.jpg") center no-repeat;
-}
-
-#palette {
-  background: url("../img/restaurants/palette.jpg") center no-repeat;
-}
-
-#delice {
-  background: url("../img/restaurants/delice.jpg") center no-repeat;
-}
-
-#note {
-  background: url("../img/restaurants/note.jpg") center no-repeat;
-}
-
-#francaise,
-#palette,
-#delice,
-#note {
-  background-size: cover;
-}
-
 .hero {
   height: 50vh;
   max-height: 800px;

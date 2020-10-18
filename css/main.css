@@ -11,20 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-@-webkit-keyframes loading {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes loading {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -52,6 +38,7 @@ a {
 }
 
 .btn__color {
+  border-radius: 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -179,5 +166,28 @@ footer ul li span {
 
 .card__heart:hover i {
   color: #9356dc;
+}
+
+#francaise {
+  background: url("../img/restaurants/francaise.jpg") center no-repeat;
+}
+
+#palette {
+  background: url("../img/restaurants/palette.jpg") center no-repeat;
+}
+
+#delice {
+  background: url("../img/restaurants/delice.jpg") center no-repeat;
+}
+
+#note {
+  background: url("../img/restaurants/note.jpg") center no-repeat;
+}
+
+#francaise,
+#palette,
+#delice,
+#note {
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */

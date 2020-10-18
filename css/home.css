@@ -6,6 +6,70 @@
   list-style: none;
 }
 
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -9999;
+  color: white;
+  -webkit-animation: 4s spinner;
+          animation: 4s spinner;
+  font-size: 60px;
+  font-family: "Shrikhand", cursive;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9356dc;
+}
+
+.spinner i {
+  -webkit-animation: 4s loading;
+          animation: 4s loading;
+}
+
+@-webkit-keyframes spinner {
+  0%,
+  80% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0%,
+  80% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .cards {
   margin-left: -20px;
   margin-right: -20px;
@@ -201,11 +265,6 @@
 
 .restaurants .cards .card__img {
   height: 175px;
-}
-
-.restaurants .cards .card #palette {
-  background: url("../img/restaurants/palette.jpg") center no-repeat;
-  background-size: cover;
 }
 
 .restaurants .cards .card__body {
