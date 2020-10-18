@@ -25,7 +25,12 @@ header h1 i {
   background: url("../img/restaurants/francaise.jpg") center no-repeat;
 }
 
-#francaise {
+#palette {
+  background: url("../img/restaurants/palette.jpg") center no-repeat;
+}
+
+#francaise,
+#palette {
   background-size: cover;
 }
 
@@ -109,21 +114,23 @@ main section .card {
   margin-bottom: 15px;
   overflow: hidden;
   cursor: pointer;
-}
-
-main section .card--one {
-  -webkit-animation: 5s fonduOne;
-          animation: 5s fonduOne;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  -webkit-animation: 1.5s fonduOne;
+          animation: 1.5s fonduOne;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main section .card--two {
-  -webkit-animation: 5s fonduTwo;
-          animation: 5s fonduTwo;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 main section .card--three {
-  -webkit-animation: 5s fonduThree;
-          animation: 5s fonduThree;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 main section .card h4 {
@@ -131,18 +138,19 @@ main section .card h4 {
   font-weight: 500;
   margin-bottom: 5px;
   max-width: 100%;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  max-height: 42px;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  max-height: 21px;
   overflow: hidden;
 }
 
 main section .card__infos {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
   max-width: 100%;
 }
 
@@ -152,13 +160,6 @@ main section .card__infos p {
   font-weight: 300;
   overflow: hidden;
   width: 90%;
-}
-
-main section .card__infos .hidden {
-  display: none;
-  padding-right: 10px;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 main section .card__infos .card__price {
@@ -177,8 +178,8 @@ main section .card__validator {
   background-color: #99e2d0;
   width: 20%;
   height: 100%;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
   top: 0;
   right: -20%;
   display: -webkit-box;
@@ -192,9 +193,13 @@ main section .card__validator {
           justify-content: center;
 }
 
-main section .card__validator .check {
+main section .card__validator::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
   height: 25px;
   width: 25px;
+  vertical-align: middle;
+  font-weight: 600;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,8 +214,8 @@ main section .card__validator .check {
   color: #99e2d0;
   -webkit-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
@@ -225,13 +230,9 @@ main section .card:hover .card__validator {
           transform: translateX(-100%);
 }
 
-main section .card:hover .card__validator .check {
+main section .card:hover .card__validator::before {
   -webkit-transform: rotateZ(360deg);
           transform: rotateZ(360deg);
-}
-
-main section .card:hover .card__infos span {
-  display: inline-block;
 }
 
 main .command {
@@ -240,22 +241,22 @@ main .command {
 }
 
 @-webkit-keyframes fonduOne {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
 }
 
 @keyframes fonduOne {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 375px) {
   main section .card__infos p {
     max-height: 19px;
     word-break: break-all;
@@ -266,5 +267,9 @@ main .command {
   main {
     padding-top: 70px;
   }
+}
+
+.btn__container {
+  text-align: center;
 }
 /*# sourceMappingURL=restaurant.css.map */

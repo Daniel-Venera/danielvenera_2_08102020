@@ -5,6 +5,8 @@ $grey: #e8e8e8;
 $lightGrey: rgb(245, 245, 245);
 $rob: "Roboto", sans-serif;
 $shr: "Shrikhand", cursive;
+$transSmooth: all 0.3s ease-in-out;
+$transLong: all 0.7s ease-in-out;
 
 @mixin flex {
   display: flex;

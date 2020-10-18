@@ -20,7 +20,12 @@ header {
   background: url("../img/restaurants/francaise.jpg") center no-repeat;
 }
 
-#francaise {
+#palette {
+  background: url("../img/restaurants/palette.jpg") center no-repeat;
+}
+
+#francaise,
+#palette {
   background-size: cover;
 }
 
@@ -82,14 +87,15 @@ main {
       margin-bottom: 15px;
       overflow: hidden;
       cursor: pointer;
-      &--one {
-        animation: 5s fonduOne;
-      }
+      transform: translateY(10px);
+      opacity: 0;
+      animation: 1.5s fonduOne;
+      animation-fill-mode: forwards;
       &--two {
-        animation: 5s fonduTwo;
+        animation-delay: 0.5s;
       }
       &--three {
-        animation: 5s fonduThree;
+        animation-delay: 1s;
       }
 
       h4 {
@@ -97,13 +103,14 @@ main {
         font-weight: 500;
         margin-bottom: 5px;
         max-width: 100%;
-        transition: all 1s ease-in-out;
-        max-height: 42px;
+        transition: $transLong;
+        max-height: 21px;
         overflow: hidden;
       }
       &__infos {
+        position: relative;
         display: flex;
-        transition: all 1s ease-in-out;
+        transition: $transLong;
         max-width: 100%;
         // overflow: hidden;
         // justify-content: space-between;
@@ -117,11 +124,13 @@ main {
           // word-break: break-all;
           // word-break: break-all;
         }
-        .hidden {
-          display: none;
-          padding-right: 10px;
-          transition: all 1s ease-in-out;
-        }
+        // .hidden {
+        //   // display: none;
+        //   visibility: hidden;
+        //   // position: absolute;
+        //   // right: 40px;
+        //   transition: $transLong;
+        // }
         .card__price {
           display: flex;
           align-items: flex-end;
@@ -134,15 +143,19 @@ main {
         background-color: $tertiary;
         width: 20%;
         height: 100%;
-        transition: all 1s ease-in-out;
+        transition: $transLong;
         top: 0;
         right: -20%;
         display: flex;
         align-items: center;
         justify-content: center;
-        .check {
+        &::before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
           height: 25px;
           width: 25px;
+          vertical-align: middle;
+          font-weight: 600;
           background-color: white;
           display: flex;
           align-items: center;
@@ -150,7 +163,7 @@ main {
           border-radius: 50%;
           color: $tertiary;
           transform: rotateZ(90deg);
-          transition: all 0.7s ease-in-out;
+          transition: all 0.4s ease-in-out;
           transition-delay: 0.3s;
         }
       }
@@ -160,13 +173,15 @@ main {
       }
       &:hover .card__validator {
         transform: translateX(-100%);
-        .check {
+        &::before {
           transform: rotateZ(360deg);
         }
       }
-      &:hover .card__infos span {
-        display: inline-block;
-      }
+      // &:hover .card__infos span {
+      //   visibility: visible;
+      //   padding-right: 10px;
+      //   // display: inline-block;
+      // }
     }
   }
   .command {
@@ -175,29 +190,13 @@ main {
   }
 }
 @keyframes fonduOne {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
-// @keyframes fonduTwo {
-//   0%,
-//   10% {
-//     transform: translateY(10px);
-//     opacity: 0;
-//   }
-// }
-
-// @keyframes fonduThree {
-//   0%,
-//   10% {
-//     transform: translateY(10px);
-//     opacity: 0;
-//   }
-// }
-
-@media (min-width: 320px) {
+@media (min-width: 375px) {
   main section .card__infos p {
     max-height: 19px;
     word-break: break-all;
@@ -218,4 +217,8 @@ main {
   //     padding-right: 15px;
   //   }
   // }
+}
+
+.btn__container {
+  text-align: center;
 }
