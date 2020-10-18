@@ -33,9 +33,14 @@ header h1 i {
   background: url("../img/restaurants/delice.jpg") center no-repeat;
 }
 
+#note {
+  background: url("../img/restaurants/note.jpg") center no-repeat;
+}
+
 #francaise,
 #palette,
-#delice {
+#delice,
+#note {
   background-size: cover;
 }
 
@@ -136,6 +141,11 @@ main section .card--two {
 main section .card--three {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+main section .card--four {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 main section .card h4 {

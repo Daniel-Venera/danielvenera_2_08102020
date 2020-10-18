@@ -28,9 +28,14 @@ header {
   background: url("../img/restaurants/delice.jpg") center no-repeat;
 }
 
+#note {
+  background: url("../img/restaurants/note.jpg") center no-repeat;
+}
+
 #francaise,
 #palette,
-#delice {
+#delice,
+#note {
   background-size: cover;
 }
 
@@ -101,6 +106,9 @@ main {
       }
       &--three {
         animation-delay: 1s;
+      }
+      &--four {
+        animation-delay: 1.5s;
       }
 
       h4 {
