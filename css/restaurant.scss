@@ -117,13 +117,13 @@ main {
           // word-break: break-all;
           // word-break: break-all;
         }
-        // .hidden {
-        //   // display: none;
-        //   visibility: hidden;
-        //   // position: absolute;
-        //   // right: 40px;
-        //   transition: $transLong;
-        // }
+        .hidden {
+          display: none;
+          // visibility: hidden;
+          // position: absolute;
+          // right: 40px;
+          // transition: $transLong;
+        }
         .card__price {
           display: flex;
           align-items: flex-end;
@@ -170,11 +170,12 @@ main {
           transform: rotateZ(360deg);
         }
       }
-      // &:hover .card__infos span {
-      //   visibility: visible;
-      //   padding-right: 10px;
-      //   // display: inline-block;
-      // }
+      &:hover .card__infos span {
+        display: inline-block;
+        // visibility: visible;
+        padding-right: 10px;
+        // display: inline-block;
+      }
     }
   }
   .command {

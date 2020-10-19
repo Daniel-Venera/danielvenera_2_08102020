@@ -156,6 +156,10 @@ main section .card__infos p {
   word-break: break-all;
 }
 
+main section .card__infos .hidden {
+  display: none;
+}
+
 main section .card__infos .card__price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,6 +231,11 @@ main section .card:hover .card__validator {
 main section .card:hover .card__validator::before {
   -webkit-transform: rotateZ(360deg);
           transform: rotateZ(360deg);
+}
+
+main section .card:hover .card__infos span {
+  display: inline-block;
+  padding-right: 10px;
 }
 
 main .command {
