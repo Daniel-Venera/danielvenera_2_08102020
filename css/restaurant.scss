@@ -93,7 +93,7 @@ main {
         font-weight: 500;
         margin-bottom: 5px;
         max-width: 100%;
-        transition: $transLong;
+        transition: max-width 0.7s ease-in-out;
         max-height: 21px;
         overflow: hidden;
         word-break: break-all;
@@ -101,28 +101,20 @@ main {
       &__infos {
         position: relative;
         display: flex;
-        transition: $transLong;
+        transition: max-width 0.7s ease-in-out;
         max-width: 100%;
-        // overflow: hidden;
-        // justify-content: space-between;
+
         p {
           font-size: 15px;
           padding-right: 10px;
           font-weight: 300;
-          // max-height: 18px;
+
           overflow: hidden;
           width: 90%;
           word-break: break-all;
-
-          // word-break: break-all;
-          // word-break: break-all;
         }
         .hidden {
           display: none;
-          // visibility: hidden;
-          // position: absolute;
-          // right: 40px;
-          // transition: $transLong;
         }
         .card__price {
           display: flex;
@@ -172,9 +164,8 @@ main {
       }
       &:hover .card__infos span {
         display: inline-block;
-        // visibility: visible;
+
         padding-right: 10px;
-        // display: inline-block;
       }
     }
   }
@@ -201,16 +192,6 @@ main {
   main {
     padding-top: 70px;
   }
-  // .row {
-  //   display: flex;
-  //   margin-left: -15px;
-  //   margin-right: -15px;
-  //   section {
-  //     width: 33.3%;
-  //     padding-left: 15px;
-  //     padding-right: 15px;
-  //   }
-  // }
 }
 
 .btn__container {
