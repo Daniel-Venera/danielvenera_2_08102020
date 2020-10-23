@@ -125,6 +125,20 @@ main section .card--four {
           animation-delay: 1.5s;
 }
 
+main section .card__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section .card__title h4 {
+  padding-right: 10px;
+}
+
+main section .card__title .hidden {
+  font-size: 18px;
+}
+
 main section .card h4 {
   font-size: 18px;
   font-weight: 500;
@@ -148,16 +162,12 @@ main section .card__infos {
 }
 
 main section .card__infos p {
-  font-size: 15px;
+  font-size: 14px;
   padding-right: 10px;
   font-weight: 300;
   overflow: hidden;
   width: 90%;
   word-break: break-all;
-}
-
-main section .card__infos .hidden {
-  display: none;
 }
 
 main section .card__infos .card__price {
@@ -169,6 +179,12 @@ main section .card__infos .card__price {
           align-items: flex-end;
   font-weight: 500;
   width: 10%;
+}
+
+main section .card .hidden {
+  font-size: 14px;
+  display: none;
+  font-weight: 300;
 }
 
 main section .card__validator {
@@ -223,6 +239,11 @@ main section .card:hover h4 {
   max-width: 80%;
 }
 
+main section .card:hover .card__infos p,
+main section .card:hover .card__title h4 {
+  padding-right: 0;
+}
+
 main section .card:hover .card__validator {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -233,7 +254,7 @@ main section .card:hover .card__validator::before {
           transform: rotateZ(360deg);
 }
 
-main section .card:hover .card__infos span {
+main section .card:hover .hidden {
   display: inline-block;
   padding-right: 10px;
 }
@@ -259,10 +280,24 @@ main .command {
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   main section .card__infos p {
-    max-height: 19px;
+    max-height: 18px;
     word-break: break-all;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  main section .card__infos p {
+    font-size: 12px;
+    max-height: 14px;
+  }
+  main section .card__price {
+    font-size: 14px;
+  }
+  main section h4 {
+    font-size: 15px !important;
+    max-height: 18px !important;
   }
 }
 
